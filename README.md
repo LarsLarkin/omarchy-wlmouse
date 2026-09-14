@@ -83,9 +83,6 @@ After install:
 - Left-click opens the panel.
 - Right-click opens the WLmouse web app (edit URL in `BarWidget.qml` if desired).
 
-## Update
-
-If you installed via `omarchy plugin add`, update using Omarchy’s plugin tooling (or re-add / pull depending on your workflow).
 
 ## Uninstall
 
