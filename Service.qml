@@ -51,19 +51,19 @@ Item {
   property double _lastCriticalNotifyMs: 0
   property int _lastBatterySeen: -1
 
-  readonly property string wlMousePath: (Quickshell.env("HOME") || "") + "/.local/bin/wl-mouse"
+  readonly property string home: Quickshell.env("HOME") || ""
+
   readonly property var helperEnvironment: ({
-    "PATH": (Quickshell.env("HOME") || "") + "/.local/bin:/usr/bin:/bin",
-    "HOME": Quickshell.env("HOME") || "",
+    "PATH": home + "/.local/bin:" + home + "/.cargo/bin:/usr/bin:/bin",
+    "HOME": home,
     "USER": Quickshell.env("USER") || "",
     "XDG_RUNTIME_DIR": Quickshell.env("XDG_RUNTIME_DIR") || "",
     "DBUS_SESSION_BUS_ADDRESS": Quickshell.env("DBUS_SESSION_BUS_ADDRESS") || "",
     "LANG": Quickshell.env("LANG") || "C"
   })
-
   function runWlMouse(args, jsonMode) {
     // Si 3s te daba problemas, súbelo; lo dejo en 8 para ser más robusto
-    var cmd = ["/usr/bin/timeout", "-s", "KILL", "8", wlMousePath]
+    var cmd = ["/usr/bin/timeout", "-s", "KILL", "8", "wl-mouse"]
     if (selectedDevice && String(selectedDevice).trim() !== "") {
       cmd.push("-d")
       cmd.push(String(selectedDevice).trim())
