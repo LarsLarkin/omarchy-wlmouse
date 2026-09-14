@@ -68,7 +68,7 @@ sudo pacman -S cargo
 This compiles and installs the `wl-mouse` binary into `~/.cargo/bin/wl-mouse`:
 
 ```bash
-cargo install --git https://github.com/Creationsss/wl-mouse --locked
+cargo install --git https://github.com/Creationsss/wl-mouse --rev 6bafea88fb8cd3e80abd94d0b73971d60c06318c --locked
 ```
 
 
