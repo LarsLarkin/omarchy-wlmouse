@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "omarchy-wlmouse",
+  "name": "OmWLmouse",
+  "version": "1.0.0",
+  "author": "LarsLarkin",
+  "license": "MIT",
+  "description": "WLmouse controller for Omarchy: battery, notifications, DPI, polling rate, LOD, debounce and more.",
+  "kinds": ["service", "bar-widget"],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "WLmouse",
+    "description": "WLmouse status and controls",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
